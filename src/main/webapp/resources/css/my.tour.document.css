@@ -1,0 +1,33 @@
+
+.error {
+	font: bold 12px Verdana, Geneva, Arial;
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.msg {
+	font: bold 12px Verdana, Geneva, Arial;
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+#login-box {
+	width: 570px;
+	padding: 5px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #D3D3D3;
+}
+.row{
+	margin:0 25% 0 25%;
+}

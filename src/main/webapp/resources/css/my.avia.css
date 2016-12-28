@@ -1,0 +1,953 @@
+* {
+	box-sizing: border-box;
+}
+.search-results {
+	position: relative;
+	right: 0px;
+	left: 0px;
+}
+.results__content {
+	width: 729px;
+	float: left;
+	padding-top: 20px;
+	position: relative;
+}
+.results__inner {
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 10px;
+	width: 748px;
+}
+/* @media all and (min-width:1024px) */
+.results__inner {
+	width: 1004px;
+}
+/* @media all and (min-width:1280px) */
+.results__inner {
+	width: 1260px;
+}
+.results__inner::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+.ticket__header {
+	margin: 0 40px 0 20px;
+	position: relative;
+}
+.fly-segment__common-info {
+	position: relative;
+}
+.cf::after, .cf::before, .fly-segment__common-info::after, .fly-segment__common-info::before, .fly-segment__flight-info::after, .fly-segment__flight-info::before, .fly-segment__flight-stop::after, .fly-segment__flight-stop::before, .fly-segment__flight::after, .fly-segment__flight::before, .footer__inner::after, .footer__inner::before, .form__inner::after, .form__inner::before, .form__wrap::after, .form__wrap::before, .old-browser-notification__inner::after, .old-browser-notification__inner::before, .open-jaw-wrap .add-segment-block::after, .open-jaw-wrap .add-segment-block::before, .results__inner::after, .results__inner::before, .sorting__tabs::after, .sorting__tabs::before, .ticket__header::after, .ticket__header::before {
+
+	display: block;
+	height: 0px;
+	overflow: hidden;
+}
+.cf::after, .fly-segment__common-info::after, .fly-segment__flight-info::after, .fly-segment__flight-stop::after, .fly-segment__flight::after, .footer__inner::after, .form__inner::after, .form__wrap::after, .old-browser-notification__inner::after, .open-jaw-wrap .add-segment-block::after, .results__inner::after, .sorting__tabs::after, .ticket__header::after {
+	clear: both;
+}
+.results {
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.page {
+	min-height: 100%;
+	padding-top: 102px;
+	min-width: 768px;
+}
+
+.ticket {
+	position: relative;
+	background: #fff;
+	box-shadow: 0px 0px 3px 0px hsla(0, 0%, 62%, 0.5);
+	margin: 0 0 20px 0;
+	font-size: 0.75rem;
+}
+.ticketNew{
+	position: relative;
+	margin: 0 0 0 0;
+	font-size: 0.75rem;
+}
+.ticket__wrapper {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	position: relative;
+}
+.ticket__opener {
+	cursor: pointer;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 20px;
+	border-left: 1px solid #edf5f7;
+	background: #edf5f7;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index: 2;
+}
+.ticket__opener, .ticket__opener::after {
+	position: absolute;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.ticket__opener::after {
+	content: "";
+	display: block;
+	top: 50%;
+	margin-top: -5px;
+	right: 5px;
+	width: 0px;
+	height: 0px;
+	border-top: 5px solid #abbdc1;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	will-change: transform;
+}
+.ticket__container {
+	display: table-row;
+}
+.ticket__buy-col {
+	display: table-cell;
+	background: #fff;
+	width: 200px;
+	padding: 25px 20px 10px;
+	border-right: 1px solid #008ED0;
+	vertical-align: top;
+	border-radius: 5px 0 0 5px;
+	position: relative;
+}
+.js-tickets-container {
+	background-color: #EEF2FA;
+}
+.ticket__content {
+	display: table-cell;
+	background: #fff;
+	width: 510px;
+	padding-top: 15px;
+	position: relative;
+	vertical-align: top;
+	border-radius: 0 5px 5px 0;
+}
+.ticket__contentNew {
+	display: table-cell;
+	background: #EEF2FA;
+	width: 510px;
+	padding-top: 15px;
+	position: relative;
+	vertical-align: top;
+	border-radius: 0 5px 5px 0;
+}
+.ticket__segments {
+	cursor: pointer;
+	padding: 0 40px 10px 20px;
+}
+.fly-segment {
+	height: 110px;
+	position: relative;
+	padding-bottom: 25px;
+	padding-top: 12px;
+}
+.ticket__segmentsNew {
+	cursor: pointer;
+	padding: 0 20px 0px 15px;
+}
+.fly-segmentNew {
+	height: 95px;
+	position: relative;
+	padding-bottom: 25px;
+	padding-top: 12px;
+}
+:first-child.fly-segment::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 1px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEUlEQVQIW2O48+jJfxhmAAIAccAK5CoCE8kAAAAASUVORK5CYII=) 0 100% repeat-x;
+}
+.ticket__warning-text {
+	padding-top: 15px;
+	font-size: 0.75rem;
+	color: #889497;
+	margin-left: 66px;
+	position: relative;
+	display: none;
+}
+.ticket__warning-text::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	height: 1px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEUlEQVQIW2O48+jJfxhmAAIAccAK5CoCE8kAAAAASUVORK5CYII=) 0 0 repeat-x;
+}
+.is-closed .ticket__warning-text {
+	display: none !important;
+}
+.has-baggage-info.has-wifi .ticket__warning-text.--baggage-wifi, .has-baggage-info .ticket__warning-text.--baggage, .has-wifi .ticket__warning-text.--wifi {
+	display: block;
+}
+.ticket__warning-text sup {
+	margin-left: -10px;
+	margin-right: 4px;
+	width: 6px;
+}
+.fly-segment__title {
+	font-weight: 600;
+	font-size: 1.12rem;
+	line-height: 1.75rem;
+	margin: 10px 0 12px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.--oneway .fly-segment__title, .--ticket-train .fly-segment__title, .is-closed .fly-segment__title {
+	display: none;
+}
+.fly-segment__baggage {
+	border-top: 1px solid #e4e7e8;
+	border-bottom: 1px solid #e4e7e8;
+	overflow: hidden;
+	margin: 25px 0 15px;
+	display: none;
+}
+.has-baggage-info .fly-segment__baggage {
+	display: block;
+}
+.fly-segment__baggage-item {
+	width: 178px;
+	margin: auto;
+}
+.--one-baggage .fly-segment__baggage-item {
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+:first-child.fly-segment__baggage-wrap .fly-segment__baggage-item {
+	position: relative;
+}
+.--ticket-train .fly-segment__baggage, .fly-segment__baggage.--one-baggage .fly-segment__baggage-item::after, .is-closed .fly-segment__baggage {
+	display: none;
+}
+.fly-segment__flights {
+	padding-left: 66px;
+	margin-top: 9px;
+}
+.is-closed .fly-segment__flights {
+	display: none;
+}
+.fly-segment__baggage-wrap {
+	width: 50%;
+	height: 32px;
+	margin: 15px 0 19px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.--one-baggage .fly-segment__baggage-wrap {
+	width: 100%;
+	float: none;
+	text-align: center;
+	height: 22px;
+	margin: 7px 0 19px;
+}
+.fly-segment__baggage-wrap.is-hidden {
+	display: none;
+}
+.fly-segment__baggage-wrap.is-relative {
+	width: 100%;
+	float: none;
+	text-align: center;
+	height: 17px;
+}
+.fly-segment__baggage-inner-wrap {
+	display: inline-block;
+	vertical-align: middle;
+}
+.fly-segment__baggage-icon {
+	display: none;
+	position: relative;
+	margin-right: 10px;
+	text-align: center;
+	vertical-align: top;
+}
+.fly-segment__baggage-icon::after {
+	content: attr(data-weight);
+	position: relative;
+	top: 3px;
+	color: #9ab0b9;
+	font-size: 0.56rem;
+	font-weight: 700;
+	font-style: normal;
+}
+.--one-baggage .fly-segment__baggage-icon {
+	vertical-align: middle;
+}
+.fly-segment__baggage-icon.--relative {
+	width: 72px;
+	height: 23px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCA3MiAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+aW5jbHVkZWRfMzA8L3RpdGxlPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTEuOTgzIDIwaDE1LjEwNGMuNTE4IDAgLjkxLS40MTYuOTEtLjk5NVY3Ljk5NWMwLS41OC0uMzktLjk5NS0uOTEtLjk5NUgxLjk4M2MtLjUzNyAwLS45NjIuNDM1LS45NjIuOTk1djExLjAxYzAgLjU2LjQyNS45OTUuOTYzLjk5NXpNLjAyIDE5LjAwNVY3Ljk5NUMuMDIgNi44OTMuODg0IDYgMS45ODQgNmgxNS4xMDRjMS4xIDAgMS45MS44OTMgMS45MSAxLjk5NXYxMS4wMWMwIDEuMTAyLS44MSAxLjk5NS0xLjkxIDEuOTk1SDEuOTgzQy44OCAyMSAuMDIgMjAuMTA3LjAyIDE5LjAwNXoiIGZpbGw9IiM5REIwQjkiLz48cGF0aCBkPSJNMTQuNSA3YzAtMy4wMjctMi4yMjYtNS41LTUtNS41cy01IDIuNDczLTUgNS41aDFjMC0yLjQ5NiAxLjgwMy00LjUgNC00LjVzNCAyLjAwNCA0IDQuNWgxeiIgZmlsbD0iIzlBQjBCOSIvPjxwYXRoIGQ9Ik0zMyAyMXYtMWg3djJjMCAuMDAzLS4wMDMgMCAwIDAgLjAwMiAwIDAgLjAwMiAwIDB2LTJoMy4wODdjLjUxOCAwIC45MS0uNDE2LjkxLS45OTVWNi45OTVjMC0uNTgtLjM5LS45OTUtLjkxLS45OTVIMjkuOTgzYy0uNTM3IDAtLjk2Mi40MzUtLjk2Mi45OTV2MTIuMDFjMCAuNTYuNDI1Ljk5NS45NjMuOTk1SDMzdjJjMCAuMDAzLS4wMDMgMCAwIDAgLjAwMiAwIDAgLjAwMiAwIDB2LTF6bTEgMHYxYzAgLjU1My0uNDQ0IDEtMSAxLS41NTIgMC0xLS40NDMtMS0xdi0xaC0yLjAxN2MtMS4xMDIgMC0xLjk2Mi0uODkzLTEuOTYyLTEuOTk1VjYuOTk1YzAtMS4xMDIuODYzLTEuOTk1IDEuOTYzLTEuOTk1aDEzLjEwNGMxLjEgMCAxLjkxLjg5MyAxLjkxIDEuOTk1djEyLjAxYzAgMS4xMDItLjgxIDEuOTk1LTEuOTEgMS45OTVINDF2MWMwIC41NTMtLjQ0NCAxLTEgMS0uNTUyIDAtMS0uNDQzLTEtMXYtMWgtNXptMC0yMGg0Ljk5N2MuMDA4IDAgLjAwMy4wMDUuMDAzIDBoLTQuOTk3QzMzLjk5NSAxIDM0IC45OTUgMzQgMXptLTEgMGMwLS41NTIuNDM4LTEgMS4wMDMtMWg0Ljk5NEExIDEgMCAwIDEgNDAgMWMwIC41NTItLjQzOCAxLTEuMDAzIDFoLTQuOTk0QTEgMSAwIDAgMSAzMyAxem0yIDF2M2gtMVYyaDF6bTMgMGgxdjNoLTFWMnptMTcgMTBjMCA0LjQyIDMuNTggOCA4IDhzOC0zLjU4IDgtOC0zLjU4LTgtOC04LTggMy41OC04IDh6bS0xIDBhOSA5IDAgMCAxIDktOSA5IDkgMCAwIDEgOSA5IDkgOSAwIDAgMS05IDkgOSA5IDAgMCAxLTktOXoiIGZpbGw9IiM5REIwQjkiLz48cGF0aCBkPSJNMjQgMTJ2LTEuNTAyYS40OTQuNDk0IDAgMCAwLS41LS40OThjLS4yNjggMC0uNS4yMjMtLjUuNDk4VjEyaC0xLjUwMmEuNDk0LjQ5NCAwIDAgMC0uNDk4LjVjMCAuMjY4LjIyMy41LjQ5OC41SDIzdjEuNTAyYzAgLjI4My4yMjQuNDk4LjUuNDk4LjI2OCAwIC41LS4yMjMuNS0uNDk4VjEzaDEuNTAyYS40OTQuNDk0IDAgMCAwIC40OTgtLjVjMC0uMjY4LS4yMjMtLjUtLjQ5OC0uNUgyNHoiIGZpbGw9IiM5QUIwQjkiLz48cGF0aCBkPSJNNDcuNDk4IDEyYS41MDQuNTA0IDAgMCAxLS40OTgtLjVjMC0uMjc2LjIxNS0uNS40OTgtLjVoNC4wMDRjLjI3NSAwIC40OTguMjMyLjQ5OC41IDAgLjI3Ni0uMjE1LjUtLjQ5OC41aC00LjAwNHptMCAyYS41MDQuNTA0IDAgMCAxLS40OTgtLjVjMC0uMjc2LjIxNS0uNS40OTgtLjVoNC4wMDRjLjI3NSAwIC40OTguMjMyLjQ5OC41IDAgLjI3Ni0uMjE1LjUtLjQ5OC41aC00LjAwNHoiIGZpbGw9IiM5NkIwQjkiLz48L2c+PC9zdmc+) no-repeat;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 0px;
+}
+.fly-segment__baggage-icon.--relative::after {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	font-size: 0.5rem;
+}
+.fly-segment__baggage-description {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.81rem;
+	color: #889497;
+	width: 149px;
+}
+.--one-baggage .fly-segment__baggage-description {
+	width: auto;
+	vertical-align: middle;
+	padding-top: 7px;
+}
+.is-relative .fly-segment__baggage-description {
+	width: auto;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.fly-segment__baggage-icon.--handbag {
+	width: 19px;
+	height: 19px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPkdyb3VwIDExPC90aXRsZT48ZGVmcz48cGF0aCBkPSJNMS45ODMgMTlDLjg4IDE5IC4wMiAxOC4xMDcuMDIgMTcuMDA1VjUuOTk1Qy4wMiA0Ljg5My44ODQgNCAxLjk4NCA0aDE1LjEwNGMxLjEgMCAxLjkxLjg5MyAxLjkxIDEuOTk1djExLjAxYzAgMS4xMDItLjgxIDEuOTk1LTEuOTEgMS45OTVIMS45ODN6IiBpZD0iYSIvPjxtYXNrIGlkPSJjIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTguOTc2IiBoZWlnaHQ9IjE1IiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik0xNCA1YzAtMi43Ni0yLjAxNS01LTQuNS01UzUgMi4yNCA1IDUiIGlkPSJiIi8+PG1hc2sgaWQ9ImQiIHg9IjAiIHk9IjAiIHdpZHRoPSI5IiBoZWlnaHQ9IjUiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2IiLz48L21hc2s+PC9kZWZzPjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjOURCMEI5IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjx1c2UgbWFzaz0idXJsKCNjKSIgeGxpbms6aHJlZj0iI2EiLz48dXNlIG1hc2s9InVybCgjZCkiIHhsaW5rOmhyZWY9IiNiIi8+PC9nPjwvc3ZnPg==) no-repeat;
+	margin-top: 7px;
+}
+.fly-segment__baggage-icon.--handbag::after {
+	top: 2px;
+}
+.fly-segment__baggage-icon.--baggage {
+	width: 17px;
+	height: 23px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPkNvbWJpbmVkIFNoYXBlPC90aXRsZT48ZGVmcz48cGF0aCBkPSJNNiAyMXYxLjAwMUEuOTk3Ljk5NyAwIDAgMSA1IDIzYy0uNTUyIDAtMS0uNDQzLTEtLjk5OVYyMUgxLjk4M0MuODggMjEgLjAyIDIwLjEwNy4wMiAxOS4wMDVWNS45OTVDLjAyMSA0Ljg5My44ODMgNCAxLjk4MyA0aDEzLjEwNGMxLjEwMSAwIDEuOTEuODkzIDEuOTEgMS45OTV2MTMuMDFjMCAxLjEwMi0uODEgMS45OTUtMS45MSAxLjk5NUgxM3YxLjAwMUEuOTk3Ljk5NyAwIDAgMSAxMiAyM2MtLjU1MiAwLTEtLjQ0My0xLS45OTlWMjFINnpNNSAxYzAtLjU1Mi40MzgtMSAxLjAwMy0xaDQuOTk0QS45OTkuOTk5IDAgMCAxIDEyIDFjMCAuNTUyLS40MzggMS0xLjAwMyAxSDYuMDAzQS45OTkuOTk5IDAgMCAxIDUgMXptMiAxdjJINlYyaDF6bTQgMHYyaC0xVjJoMXoiIGlkPSJhIi8+PG1hc2sgaWQ9ImIiIHg9IjAiIHk9IjAiIHdpZHRoPSIxNi45NzYiIGhlaWdodD0iMjMiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PC9kZWZzPjx1c2UgbWFzaz0idXJsKCNiKSIgeGxpbms6aHJlZj0iI2EiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjOURCMEI5IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) no-repeat;
+	margin-top: 5px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPkNvbWJpbmVkIFNoYXBlPC90aXRsZT48ZGVmcz48cGF0aCBkPSJNNiAyMXYxLjAwMUEuOTk3Ljk5NyAwIDAgMSA1IDIzYy0uNTUyIDAtMS0uNDQzLTEtLjk5OVYyMUgxLjk4M0MuODggMjEgLjAyIDIwLjEwNy4wMiAxOS4wMDVWNS45OTVDLjAyMSA0Ljg5My44ODMgNCAxLjk4MyA0aDEzLjEwNGMxLjEwMSAwIDEuOTEuODkzIDEuOTEgMS45OTV2MTMuMDFjMCAxLjEwMi0uODEgMS45OTUtMS45MSAxLjk5NUgxM3YxLjAwMUEuOTk3Ljk5NyAwIDAgMSAxMiAyM2MtLjU1MiAwLTEtLjQ0My0xLS45OTlWMjFINnpNNSAxYzAtLjU1Mi40MzgtMSAxLjAwMy0xaDQuOTk0QS45OTkuOTk5IDAgMCAxIDEyIDFjMCAuNTUyLS40MzggMS0xLjAwMyAxSDYuMDAzQS45OTkuOTk5IDAgMCAxIDUgMXptMiAxdjJINlYyaDF6bTQgMHYyaC0xVjJoMXoiIGlkPSJhIi8+PG1hc2sgaWQ9ImIiIHg9IjAiIHk9IjAiIHdpZHRoPSIxNi45NzYiIGhlaWdodD0iMjMiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PC9kZWZzPjx1c2UgbWFzaz0idXJsKCNiKSIgeGxpbms6aHJlZj0iI2EiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjOURCMEI5IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) no-repeat;
+}
+.without-baggage .fly-segment__baggage-icon.--baggage {
+	width: 17px;
+	height: 23px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R3JvdXAgMTI8L3RpdGxlPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTQuOTg3IDIxdi0xaDcuMDA4djJjMCAuMDAyLS4wMDIgMCAwIDAgLjAwNSAwIC4wMDMuMDAyLjAwMyAwdi0yaDMuMDljLjUyIDAgLjkxMi0uNDE3LjkxMi0uOTk1VjYuOTk1YzAtLjU4LS4zOTItLjk5NS0uOTEzLS45OTVIMS45NjVDMS40MjUgNiAxIDYuNDM1IDEgNi45OTV2MTIuMDFjMCAuNTYuNDI1Ljk5NS45NjUuOTk1aDMuMDJ2MmMwIC4wMDItLjAwMyAwIDAgMCAuMDA0IDAgLjAwMi4wMDIuMDAyIDB2LTF6bTEgMHYxYzAgLjU1My0uNDQ1IDEtMS4wMDIgMS0uNTUzIDAtMS0uNDQzLTEtMXYtMWgtMi4wMkMuODYyIDIxIDAgMjAuMTA3IDAgMTkuMDA1VjYuOTk1QzAgNS44OTMuODYzIDUgMS45NjUgNWgxMy4xMjJDMTYuMTkgNSAxNyA1Ljg5MyAxNyA2Ljk5NXYxMi4wMUMxNyAyMC4xMDcgMTYuMTg4IDIxIDE1LjA4NyAyMWgtMi4wOXYxYzAgLjU1My0uNDQzIDEtMSAxYS45OTguOTk4IDAgMCAxLTEuMDAyLTF2LTFINS45ODd6TTUuOTg1IDFoNS4wMDdjLjAxIDAgLjAwNC4wMDUuMDA0IDBINS45OWMtLjAxIDAtLjAwNS0uMDA1LS4wMDUgMHptLTEgMGMwLS41NTIuNDQtMSAxLjAwNS0xaDUuMDAyYTEgMSAwIDAgMSAxLjAwNCAxYzAgLjU1Mi0uNDM4IDEtMS4wMDQgMUg1Ljk5YTEgMSAwIDAgMS0xLjAwNS0xem0xLjAwMiAxaDF2M2gtMVYyem00LjAwNiAwaDEuMDAydjNIOS45OTNWMnoiIGZpbGw9IiNGMzRDM0QiLz48cGF0aCBkPSJNOC40NCAxNC42MmwtMS44MzggMS43ODJjLS4zNjcuMzU1LS45Ni4zNTUtMS4zMjcgMHMtLjM2Ny0uOTMgMC0xLjI4NmwxLjgzOC0xLjc4Mi0xLjgzOC0xLjc4MmEuODg5Ljg4OSAwIDAgMSAwLTEuMjg2Ljk2Ljk2IDAgMCAxIDEuMzI3IDBsMS44MzggMS43ODIgMS44MzgtMS43ODJhLjk2Ljk2IDAgMCAxIDEuMzI3IDAgLjg5Ljg5IDAgMCAxIDAgMS4yODZsLTEuODM4IDEuNzgyIDEuODM4IDEuNzgyYS44OS44OSAwIDAgMSAwIDEuMjg2Ljk2Ljk2IDAgMCAxLTEuMzI3IDBMOC40NCAxNC42MnoiIGZpbGw9IiNGRjRDM0UiLz48L2c+PC9zdmc+) no-repeat;
+}
+.fly-segment__baggage-wrap.has-1-baggage :nth-child(1).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-2-baggage :nth-child(1).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-2-baggage :nth-child(2).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-3-baggage :nth-child(1).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-3-baggage :nth-child(2).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-3-baggage :nth-child(3).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-4-baggage :nth-child(1).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-4-baggage :nth-child(2).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-4-baggage :nth-child(3).fly-segment__baggage-icon, .fly-segment__baggage-wrap.has-4-baggage :nth-child(4).fly-segment__baggage-icon, .fly-segment__baggage-wrap.with-baggage :nth-child(1).fly-segment__baggage-icon, .fly-segment__baggage-wrap.without-baggage :nth-child(1).fly-segment__baggage-icon {
+	display: inline-block;
+}
+:first-child.fly-segment__baggage-wrap .fly-segment__baggage-item::after {
+	content: "";
+	width: 1px;
+	height: 36px;
+	background: #e4e7e8;
+	position: absolute;
+	top: 0px;
+	right: -25px;
+}
+.fly-segment__destination, .fly-segment__origin {
+	width: 105px;
+	overflow: hidden;
+}
+.fly-segment__origin {
+	text-align: left;
+	float: left;
+}
+.fly-segment__path {
+	position: absolute;
+	left: 115px;
+	right: 115px;
+	top: 0px;
+	height: 100px;
+	padding-top: 10px;
+}
+.fly-segment__destination {
+	text-align: right;
+	float: right;
+}
+.fly-segment__time {
+	font-size: 1.75rem;
+	line-height: 2.5rem;
+	padding-bottom: 1px;
+}
+.fly-segment__city, .fly-segment__date {
+	font-size: 12px;
+	color: #8b9497;
+	line-height: 1.5;
+}
+.fly-segment__city {
+	font-weight: 600;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.fly-segment__path-stop {
+	position: absolute;
+	padding-top: 26px;
+	top: 33px;
+	width: 26px;
+	margin-left: -13px;
+	text-align: center;
+	display: none;
+	z-index: 1;
+}
+.fly-segment__path-stop.--destination, .fly-segment__path-stop.--origin {
+	margin-left: 0px;
+	display: block;
+}
+.fly-segment__path-stop.--origin {
+	text-align: left;
+	left: 0px;
+}
+.fly-segment__path-stop.--destination {
+	text-align: right;
+	right: 0px;
+}
+.fly-segment__path-stop.--destination::before, .fly-segment__path-stop.--origin::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat;
+	margin: 0;
+	top: -22px;
+}
+.fly-segment__path-stop.--origin::before {
+	width: 18px;
+	height: 8px;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE4IDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPkZpbGwgMTwvdGl0bGU+PHBhdGggZD0iTTEzLjg0NS43NThsLTMuMTkxIDEuNDkzQzguNjY4IDEuNjY2IDUuOTI0Ljg1NyAzLjQwOC4xMDlsLTEuMjEuNTUzIDQuNTMgMy4zODQtMi44MDEgMS4yODFBMTg1Ni4yIDE4NTYuMiAwIDAgMCAuNTggNC43MDFjLS41MDQtLjA5My0uODIxLjM0My0uMzUuNjk0IDIuMjIgMS42NjIgMy4xMSAyLjMzMyAzLjExIDIuMzMzYTEuMzcgMS4zNyAwIDAgMCAxLjM4OC4xNDhsMTIuNDc0LTUuNzM4Yy45MTItLjQ2Mi44OS0xLjA4Ni42NjgtMS41ODgtLjMxNS0uNjYyLTEuNjc1LS44NjctNC4wMjUuMjA4eiIgZmlsbD0iI0E0QjBCOSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
+	left: -3px;
+}
+.--stops-1 :nth-child(2).fly-segment__path-stop {
+	display: block;
+	left: 50%;
+}
+.fly-segment__path-stop.--destination::before {
+	width: 17px;
+	height: 13px;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNyAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlsbCAxPC90aXRsZT48cGF0aCBkPSJNMTYuNzEyIDExLjgzM2MuMjQ1LS42OS0uNTcxLTEuNzk3LTIuOTkzLTIuNjk4bC0zLjMxMi0xLjIwMmMtLjk5LTEuODE3LTIuMzU4LTQuMzMtMy42MS02LjYzOEw1LjU1My44MzFsLjgxIDUuNTk3LTIuODg3LTEuMDc2Yy0uNjctLjk4LTEuMzktMi4wMzItMS45MjMtMi44MDgtLjI5LS40MjItLjgyMy0uMzM5LS43MzkuMjQzLjM5NSAyLjc0NS41NSAzLjg0OC41NSAzLjg0OC4wNjkuNDc3LjM5MS45MDYuODc2IDEuMDg2bDEyLjg3OCA0Ljc2M2MuOTcyLjMxOSAxLjM5Ny0uMTM5IDEuNTk1LS42NSIgZmlsbD0iI0E0QjBCOSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
+	right: 0px;
+}
+.fly-segment__path-line {
+	display: block;
+	height: 1px;
+	position: absolute;
+	top: 38px;
+	left: 10px;
+	right: 10px;
+	background: #a9b4b9;
+}
+.fly-segment__total-time {
+	font-size: 11px;
+	color: #8e9497;
+	text-align: center;
+	margin-top: -3px;
+}
+.fly-segment__path-iata {
+	font-size: 10px;
+	font-weight: 600;
+}
+.fly-segment__path-stop .fly-segment__iata-dot {
+	display: block;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	border: 1px solid #8c9497;
+	box-shadow: 0px 0px 0px 2px #fff;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	margin-left: -7px;
+	top: 0px;
+	z-index: 0;
+}
+.fly-segment__path-stop .fly-segment__iata-dot::after {
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #ff6d00;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	display: none;
+	z-index: 0;
+}
+.fly-segment__path-stop.--destination .fly-segment__iata-dot {
+	left: auto;
+	right: 0px;
+	margin-left: 0px;
+}
+.tooltip {
+	position: absolute;
+	padding: 11px 16px;
+	background: rgba(5,38,64,.901961);
+	border-radius: 3px;
+	box-shadow: 0px 6px 9px rgba(0,0,0,0.08);
+	color: #fff;
+	transition: opacity .15s linear, z-index 10ms linear .15s, -webkit-transform .5s ease-out;
+	-o-transition: opacity .15s linear, z-index 10ms .15s linear, -o-transform .5s ease-out;
+	transition: transform .5s ease-out, opacity .15s linear, z-index 10ms linear .15s;
+	transition: transform .5s ease-out, opacity .15s linear, z-index 10ms linear .15s, -webkit-transform .5s ease-out, -o-transform .5s ease-out;
+	-webkit-transform: translateY(20px);
+	-ms-transform: translateY(20px);
+	-o-transform: translateY(20px);
+	transform: translateY(20px);
+	opacity: 0;
+	text-align: left;
+	z-index: -1;
+	pointer-events: none;
+	top: -81px;
+	left: -80px;
+	width: 185px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	will-change: transform;
+}
+.fly-segment__path-name-tooltip {
+	bottom: 113%;
+	left: -80px;
+	width: 185px;
+	min-height: 76px;
+	top: auto;
+}
+.ticket__airline-tooltip {
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	left: -17px;
+	top: -48px;
+	right: auto;
+}
+.ticket__gate-price-tooltip {
+	top: 5px;
+	left: 165px;
+	width: 105px;
+	text-align: center;
+}
+.ticket__baggage-tooltip {
+	right: auto;
+	width: 205px;
+	bottom: 30px;
+	top: auto;
+}
+.tooltip::before {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 6px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDI1IDYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNMCAwaDI2djZIMHoiLz48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48cGF0aCBkPSJNMzguMDA2IDBBMy4wMDYgMy4wMDYgMCAwIDAgNDEtMy4wMDd2LTQyLjk4NkEzIDMgMCAwIDAgMzguMDA2LTQ5aC0xNTkuMDEyQTMuMDA2IDMuMDA2IDAgMCAwLTEyNC00NS45OTN2NDIuOTg2QTMgMyAwIDAgMC0xMjEuMDA2IDBIMS42MzZDNC45NSAwIDkuNTQgMS45MDQgMTEuODgyIDQuMjQ2bC45MS45MWExIDEgMCAwIDAgMS40MTUgMGwuOTEtLjkxQzE3LjQ2NCAxLjkgMjIuMDU2IDAgMjUuMzY2IDBoMTIuNjR6IiBmaWxsLW9wYWNpdHk9Ii45NyIgZmlsbD0iIzA1MjY0MCIgbWFzaz0idXJsKCNiKSIvPjwvZz48L3N2Zz4=) no-repeat 50% 50%;
+	opacity: 0.9;
+}
+.ticket__airline-tooltip::before {
+	left: 50% !important;
+	margin-left: -11px !important;
+}
+.ticket__baggage-tooltip::before {
+	left: 102px !important;
+	right: auto !important;
+}
+.tooltip.--top {
+	-webkit-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+	transform: translateY(50px);
+}
+.fly-segment__path-name-tooltip.--destination {
+	left: -33px;
+}
+.fly-segment__path-name-tooltip.--origin {
+	left: -126px;
+}
+.tooltip.--top::before {
+	left: 50%;
+	margin-left: -13px;
+	bottom: -6px;
+}
+.fly-segment__path-name-tooltip.--destination::before {
+	left: 54px;
+}
+.fly-segment__path-stop.--origin .fly-segment__iata-dot {
+	left: 0px;
+	right: auto;
+	margin-left: 0px;
+}
+.fly-segment__path-name-tooltip.--origin::before {
+	left: 132px;
+}
+.fly-segment__title span {
+	padding-right: 10px;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+a {
+	background-color: transparent;
+}
+.ticket__airline-logo {
+	margin:0 56% 0 44%;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+.ticket__header-link {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	text-transform: uppercase;
+	font-weight: 600;
+	display: inline-block;
+	margin-right: 15px;
+	letter-spacing: 0.02rem;
+	-o-transition: color .3s ease;
+	transition: color .3s ease;
+}
+.ticket__buy {
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	display: block;
+}
+.ticket a {
+	color: #4baede;
+	text-decoration: none;
+	-o-transition: .3s color;
+	transition: color .3s;
+}
+:nth-child(2).ticket__header-link {
+	margin-right: 0px;
+}
+.ticket__header-link svg {
+	vertical-align: top;
+	display: inline-block;
+}
+.ticket__airline-logo ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+img {
+	border: 0;
+}
+.ticket__airline-tooltip-inner {
+	width: auto;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.tariffs {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin: -25px -20px 20px;
+}
+.tariffs.--single {
+	margin-bottom: 10px;
+	margin-top: -15px;
+}
+.ticket__buy-proposal {
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.ticket__buy-proposal {
+	color: #8fa2ad;
+	font-size: 0.75rem;
+}
+.ticket__proposals {
+	list-style: none;
+	margin: 10px 0 0;
+	padding: 0;
+	font-size: 0.75rem;
+}
+.ticket__proposal-item {
+	padding-bottom: 4px;
+	clear: both;
+	position: relative;
+}
+.ticket__proposal-item.--all {
+	text-align: center;
+	font-weight: 600;
+	margin-top: 2px;
+}
+.ticket__proposal-item.--all span {
+	color: #4baede;
+	-o-transition: .3s color;
+	transition: color .3s;
+	display: block;
+	cursor: pointer;
+}
+.ticket__proposal-item a, .ticket__proposal-name {
+	display: block;
+	white-space: nowrap;
+}
+.ticket__proposal-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+.ticket__proposal-price {
+	position: absolute;
+	font-weight: 600;
+	margin-left: 10px;
+	right: 0px;
+	top: 0px;
+}
+.ticket__proposal-price::after {
+	content: "";
+	display: block;
+	width: 20px;
+	position: absolute;
+	left: -20px;
+	top: 0px;
+	bottom: 0px;
+	background: -o-linear-gradient(left,fade(#fafcfd,0),fade(#fafcfd,100%));
+	background: linear-gradient(90deg,fade(#fafcfd,0),fade(#fafcfd,100%));
+}
+.rub::before {
+	content: "\E809";
+	font-family: fontello;
+}
+.tooltip.--right {
+	-webkit-transform: translateX(-50px);
+	-ms-transform: translateX(-50px);
+	-o-transform: translateX(-50px);
+	transform: translateX(-50px);
+}
+.ticket__gate-price-tooltip.--proposal {
+	top: -12px;
+	left: 100%;
+	margin-left: 10px;
+	z-index: 3;
+}
+.tooltip.--right::before {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	left: -15px;
+	top: 50%;
+	margin-top: -3px;
+}
+.ticket__price-wrap {
+	display: inline-block;
+}
+.byn::before {
+	content: "Br";
+}
+button, input {
+	border: 0;
+	margin: 0;
+	color: inherit;
+	font: inherit;
+	outline: none;
+	padding: 0;
+	line-height: normal;
+}
+button, html input[type=button], input[type=reset], input[type=submit] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+.orange-button {
+	background-color: #008ED0;
+	color: #fff;
+}
+.ticket__buy-button {
+	display: block;
+	margin-bottom: 6px;
+	width: 100%;
+	height: 48px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 0px 0px #008ED0, 0px 2px 1px 0px rgba(0,0,0,0.1);
+	font-size: 1rem;
+	overflow: hidden;
+}
+.ticket__buy-text {
+	font-size: 16px;
+	display: block;
+	font-weight: 600;
+	margin-top: 1px;
+}
+.ticket__buy-price {
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0px;
+}
+.ticket__buy-price-divider {
+	padding-right: 5px;
+}
+.ticket__buy-price-num {
+	display: inline-block;
+}
+.tariffs__item {
+	background-color: #f7fafb;
+	padding: 5px;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-right: 1px solid #e4e7e8;
+	border-bottom: 1px solid #e4e7e8;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #8fa2ac;
+}
+:first-child.tariffs__item {
+	border-radius: 5px 0 0 0;
+}
+:last-child.tariffs__item {
+	border-right: 0;
+}
+.tariffs__item.is-selected {
+	background-color: #fff;
+	border-bottom: 0;
+}
+.tariffs.--single .tariffs__item {
+	border: 0;
+	background-color: #fff;
+	cursor: default;
+}
+.ticket__baggage {
+	position: relative;
+	top: -5px;
+}
+.tariffs__item .ticket__baggage {
+	top: 0px;
+}
+.tariffs.--single .tariffs__title {
+	display: none;
+}
+.ticket__baggage-icons {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+.ticket__baggage-icons.is-hidden {
+	display: none;
+}
+.ticket__baggage-icon {
+	margin: 0 2px;
+	position: relative;
+	display: none;
+	text-align: center;
+}
+.ticket__baggage-icon::after {
+	content: attr(data-weight);
+	position: relative;
+	top: 3px;
+	color: #9ab0b9;
+	font-size: 0.56rem;
+	font-weight: 700;
+	font-style: normal;
+}
+.--baggage .ticket__baggage-icon {
+	width: 17px;
+	height: 23px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPkNvbWJpbmVkIFNoYXBlPC90aXRsZT48ZGVmcz48cGF0aCBkPSJNNiAyMXYxYzAgLjU1My0uNDQ0IDEtMSAxLS41NTIgMC0xLS40NDMtMS0xdi0xSDEuOTgzQy44OCAyMSAuMDIgMjAuMTA3LjAyIDE5LjAwNVY1Ljk5NUMuMDIgNC44OTMuODg0IDQgMS45ODQgNGgxMy4xMDRjMS4xIDAgMS45MS44OTMgMS45MSAxLjk5NXYxMy4wMWMwIDEuMTAyLS44MSAxLjk5NS0xLjkxIDEuOTk1SDEzdjFjMCAuNTUzLS40NDQgMS0xIDEtLjU1MiAwLTEtLjQ0My0xLTF2LTFINnpNNSAxYzAtLjU1Mi40MzgtMSAxLjAwMy0xaDQuOTk0QTEgMSAwIDAgMSAxMiAxYzAgLjU1Mi0uNDM4IDEtMS4wMDMgMUg2LjAwM0ExIDEgMCAwIDEgNSAxem0yIDF2Mkg2VjJoMXptNCAwdjJoLTFWMmgxeiIgaWQ9ImEiLz48bWFzayBpZD0iYiIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2Ljk3NiIgaGVpZ2h0PSIyMyIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48L2RlZnM+PHVzZSBtYXNrPSJ1cmwoI2IpIiB4bGluazpocmVmPSIjYSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2U9IiM5REIwQjkiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) no-repeat;
+	vertical-align: bottom;
+}
+.--handbags .ticket__baggage-icon {
+	width: 19px;
+	height: 19px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPkdyb3VwIDExPC90aXRsZT48ZGVmcz48cGF0aCBkPSJNMS45ODMgMTlDLjg4IDE5IC4wMiAxOC4xMDcuMDIgMTcuMDA1VjUuOTk1Qy4wMiA0Ljg5My44ODQgNCAxLjk4NCA0aDE1LjEwNGMxLjEgMCAxLjkxLjg5MyAxLjkxIDEuOTk1djExLjAxYzAgMS4xMDItLjgxIDEuOTk1LTEuOTEgMS45OTVIMS45ODN6IiBpZD0iYSIvPjxtYXNrIGlkPSJjIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTguOTc2IiBoZWlnaHQ9IjE1IiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik0xNCA1YzAtMi43Ni0yLjAxNS01LTQuNS01UzUgMi4yNCA1IDUiIGlkPSJiIi8+PG1hc2sgaWQ9ImQiIHg9IjAiIHk9IjAiIHdpZHRoPSI5IiBoZWlnaHQ9IjUiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2IiLz48L21hc2s+PC9kZWZzPjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSIjOURCMEI5IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjx1c2UgbWFzaz0idXJsKCNjKSIgeGxpbms6aHJlZj0iI2EiLz48dXNlIG1hc2s9InVybCgjZCkiIHhsaW5rOmhyZWY9IiNiIi8+PC9nPjwvc3ZnPg==) no-repeat;
+	vertical-align: bottom;
+}
+.--handbags .ticket__baggage-icon::after {
+	top: 2px;
+}
+.without-baggage.--baggage .ticket__baggage-icon {
+	width: 17px;
+	height: 23px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R3JvdXAgMTI8L3RpdGxlPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTQuOTg3IDIxdi0xaDcuMDA4djJjMCAuMDAyLS4wMDIgMCAwIDAgLjAwNSAwIC4wMDMuMDAyLjAwMyAwdi0yaDMuMDljLjUyIDAgLjkxMi0uNDE3LjkxMi0uOTk1VjYuOTk1YzAtLjU4LS4zOTItLjk5NS0uOTEzLS45OTVIMS45NjVDMS40MjUgNiAxIDYuNDM1IDEgNi45OTV2MTIuMDFjMCAuNTYuNDI1Ljk5NS45NjUuOTk1aDMuMDJ2MmMwIC4wMDItLjAwMyAwIDAgMCAuMDA0IDAgLjAwMi4wMDIuMDAyIDB2LTF6bTEgMHYxYzAgLjU1My0uNDQ1IDEtMS4wMDIgMS0uNTUzIDAtMS0uNDQzLTEtMXYtMWgtMi4wMkMuODYyIDIxIDAgMjAuMTA3IDAgMTkuMDA1VjYuOTk1QzAgNS44OTMuODYzIDUgMS45NjUgNWgxMy4xMjJDMTYuMTkgNSAxNyA1Ljg5MyAxNyA2Ljk5NXYxMi4wMUMxNyAyMC4xMDcgMTYuMTg4IDIxIDE1LjA4NyAyMWgtMi4wOXYxYzAgLjU1My0uNDQzIDEtMSAxYS45OTguOTk4IDAgMCAxLTEuMDAyLTF2LTFINS45ODd6TTUuOTg1IDFoNS4wMDdjLjAxIDAgLjAwNC4wMDUuMDA0IDBINS45OWMtLjAxIDAtLjAwNS0uMDA1LS4wMDUgMHptLTEgMGMwLS41NTIuNDQtMSAxLjAwNS0xaDUuMDAyYTEgMSAwIDAgMSAxLjAwNCAxYzAgLjU1Mi0uNDM4IDEtMS4wMDQgMUg1Ljk5YTEgMSAwIDAgMS0xLjAwNS0xem0xLjAwMiAxaDF2M2gtMVYyem00LjAwNiAwaDEuMDAydjNIOS45OTNWMnoiIGZpbGw9IiNGMzRDM0QiLz48cGF0aCBkPSJNOC40NCAxNC42MmwtMS44MzggMS43ODJjLS4zNjcuMzU1LS45Ni4zNTUtMS4zMjcgMHMtLjM2Ny0uOTMgMC0xLjI4NmwxLjgzOC0xLjc4Mi0xLjgzOC0xLjc4MmEuODg5Ljg4OSAwIDAgMSAwLTEuMjg2Ljk2Ljk2IDAgMCAxIDEuMzI3IDBsMS44MzggMS43ODIgMS44MzgtMS43ODJhLjk2Ljk2IDAgMCAxIDEuMzI3IDAgLjg5Ljg5IDAgMCAxIDAgMS4yODZsLTEuODM4IDEuNzgyIDEuODM4IDEuNzgyYS44OS44OSAwIDAgMSAwIDEuMjg2Ljk2Ljk2IDAgMCAxLTEuMzI3IDBMOC40NCAxNC42MnoiIGZpbGw9IiNGRjRDM0UiLz48L2c+PC9zdmc+) no-repeat;
+	vertical-align: bottom;
+}
+.ticket__baggage-icons.has-1-baggage :nth-child(1).ticket__baggage-icon, .ticket__baggage-icons.has-2-baggage :nth-child(1).ticket__baggage-icon, .ticket__baggage-icons.has-2-baggage :nth-child(2).ticket__baggage-icon, .ticket__baggage-icons.has-3-baggage :nth-child(1).ticket__baggage-icon, .ticket__baggage-icons.has-3-baggage :nth-child(2).ticket__baggage-icon, .ticket__baggage-icons.has-3-baggage :nth-child(3).ticket__baggage-icon, .ticket__baggage-icons.has-4-baggage :nth-child(1).ticket__baggage-icon, .ticket__baggage-icons.has-4-baggage :nth-child(2).ticket__baggage-icon, .ticket__baggage-icons.has-4-baggage :nth-child(3).ticket__baggage-icon, .ticket__baggage-icons.has-4-baggage :nth-child(4).ticket__baggage-icon, .ticket__baggage-icons.with-baggage :nth-child(1).ticket__baggage-icon, .ticket__baggage-icons.without-baggage :nth-child(1).ticket__baggage-icon {
+	display: inline-block;
+}
+.--relative .ticket__baggage-icon {
+	width: 72px;
+	height: 23px;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCA3MiAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+aW5jbHVkZWRfMzA8L3RpdGxlPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTEuOTgzIDIwaDE1LjEwNGMuNTE4IDAgLjkxLS40MTYuOTEtLjk5NVY3Ljk5NWMwLS41OC0uMzktLjk5NS0uOTEtLjk5NUgxLjk4M2MtLjUzNyAwLS45NjIuNDM1LS45NjIuOTk1djExLjAxYzAgLjU2LjQyNS45OTUuOTYzLjk5NXpNLjAyIDE5LjAwNVY3Ljk5NUMuMDIgNi44OTMuODg0IDYgMS45ODQgNmgxNS4xMDRjMS4xIDAgMS45MS44OTMgMS45MSAxLjk5NXYxMS4wMWMwIDEuMTAyLS44MSAxLjk5NS0xLjkxIDEuOTk1SDEuOTgzQy44OCAyMSAuMDIgMjAuMTA3LjAyIDE5LjAwNXoiIGZpbGw9IiM5REIwQjkiLz48cGF0aCBkPSJNMTQuNSA3YzAtMy4wMjctMi4yMjYtNS41LTUtNS41cy01IDIuNDczLTUgNS41aDFjMC0yLjQ5NiAxLjgwMy00LjUgNC00LjVzNCAyLjAwNCA0IDQuNWgxeiIgZmlsbD0iIzlBQjBCOSIvPjxwYXRoIGQ9Ik0zMyAyMXYtMWg3djJjMCAuMDAzLS4wMDMgMCAwIDAgLjAwMiAwIDAgLjAwMiAwIDB2LTJoMy4wODdjLjUxOCAwIC45MS0uNDE2LjkxLS45OTVWNi45OTVjMC0uNTgtLjM5LS45OTUtLjkxLS45OTVIMjkuOTgzYy0uNTM3IDAtLjk2Mi40MzUtLjk2Mi45OTV2MTIuMDFjMCAuNTYuNDI1Ljk5NS45NjMuOTk1SDMzdjJjMCAuMDAzLS4wMDMgMCAwIDAgLjAwMiAwIDAgLjAwMiAwIDB2LTF6bTEgMHYxYzAgLjU1My0uNDQ0IDEtMSAxLS41NTIgMC0xLS40NDMtMS0xdi0xaC0yLjAxN2MtMS4xMDIgMC0xLjk2Mi0uODkzLTEuOTYyLTEuOTk1VjYuOTk1YzAtMS4xMDIuODYzLTEuOTk1IDEuOTYzLTEuOTk1aDEzLjEwNGMxLjEgMCAxLjkxLjg5MyAxLjkxIDEuOTk1djEyLjAxYzAgMS4xMDItLjgxIDEuOTk1LTEuOTEgMS45OTVINDF2MWMwIC41NTMtLjQ0NCAxLTEgMS0uNTUyIDAtMS0uNDQzLTEtMXYtMWgtNXptMC0yMGg0Ljk5N2MuMDA4IDAgLjAwMy4wMDUuMDAzIDBoLTQuOTk3QzMzLjk5NSAxIDM0IC45OTUgMzQgMXptLTEgMGMwLS41NTIuNDM4LTEgMS4wMDMtMWg0Ljk5NEExIDEgMCAwIDEgNDAgMWMwIC41NTItLjQzOCAxLTEuMDAzIDFoLTQuOTk0QTEgMSAwIDAgMSAzMyAxem0yIDF2M2gtMVYyaDF6bTMgMGgxdjNoLTFWMnptMTcgMTBjMCA0LjQyIDMuNTggOCA4IDhzOC0zLjU4IDgtOC0zLjU4LTgtOC04LTggMy41OC04IDh6bS0xIDBhOSA5IDAgMCAxIDktOSA5IDkgMCAwIDEgOSA5IDkgOSAwIDAgMS05IDkgOSA5IDAgMCAxLTktOXoiIGZpbGw9IiM5REIwQjkiLz48cGF0aCBkPSJNMjQgMTJ2LTEuNTAyYS40OTQuNDk0IDAgMCAwLS41LS40OThjLS4yNjggMC0uNS4yMjMtLjUuNDk4VjEyaC0xLjUwMmEuNDk0LjQ5NCAwIDAgMC0uNDk4LjVjMCAuMjY4LjIyMy41LjQ5OC41SDIzdjEuNTAyYzAgLjI4My4yMjQuNDk4LjUuNDk4LjI2OCAwIC41LS4yMjMuNS0uNDk4VjEzaDEuNTAyYS40OTQuNDk0IDAgMCAwIC40OTgtLjVjMC0uMjY4LS4yMjMtLjUtLjQ5OC0uNUgyNHoiIGZpbGw9IiM5QUIwQjkiLz48cGF0aCBkPSJNNDcuNDk4IDEyYS41MDQuNTA0IDAgMCAxLS40OTgtLjVjMC0uMjc2LjIxNS0uNS40OTgtLjVoNC4wMDRjLjI3NSAwIC40OTguMjMyLjQ5OC41IDAgLjI3Ni0uMjE1LjUtLjQ5OC41aC00LjAwNHptMCAyYS41MDQuNTA0IDAgMCAxLS40OTgtLjVjMC0uMjc2LjIxNS0uNS40OTgtLjVoNC4wMDRjLjI3NSAwIC40OTguMjMyLjQ5OC41IDAgLjI3Ni0uMjE1LjUtLjQ5OC41aC00LjAwNHoiIGZpbGw9IiM5NkIwQjkiLz48L2c+PC9zdmc+) no-repeat;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 0px;
+}
+.--relative .ticket__baggage-icon::after {
+	position: absolute;
+	top: 3px;
+	right: 4px;
+	font-size: 0.5rem;
+}
+.without-baggage .fly-segment__baggage-description {
+	color: #ff4c3e;
+}
+.tariffs__item.is-selected.--empty {
+	color: #ff4c3e;
+}
+.tariffs__item.--empty .currency-code {
+	display: none;
+}
+.--empty .without-baggage.--baggage .ticket__baggage-icon {
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+bHVnZ2FnZV9mYWxzZTwvdGl0bGU+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNC45ODcgMjF2LTFoNy4wMDh2Mi4wMDFjMCAuMDAxLS4wMDItLjAwMS4wMDEtLjAwMS4wMDQgMCAuMDAyLjAwMi4wMDIuMDAxVjIwaDMuMDg5Yy41MiAwIC45MTMtLjQxNy45MTMtLjk5NVY2Ljk5NWMwLS41OC0uMzkyLS45OTUtLjkxMy0uOTk1SDEuOTY1QzEuNDI2IDYgMSA2LjQzNSAxIDYuOTk1djEyLjAxYzAgLjU2MS40MjUuOTk1Ljk2NS45OTVoMy4wMTl2Mi4wMDFjMCAuMDAxLS4wMDItLjAwMS4wMDEtLjAwMS4wMDQgMCAuMDAyLjAwMi4wMDIuMDAxVjIxem0xIDB2MS4wMDFBLjk5OC45OTggMCAwIDEgNC45ODUgMjNhLjk5Ny45OTcgMCAwIDEtMS4wMDEtLjk5OVYyMWgtMi4wMkMuODYzIDIxIDAgMjAuMTA3IDAgMTkuMDA1VjYuOTk1QzAgNS44OTMuODYzIDUgMS45NjUgNWgxMy4xMjJDMTYuMTkgNSAxNyA1Ljg5MyAxNyA2Ljk5NXYxMi4wMUMxNyAyMC4xMDcgMTYuMTg4IDIxIDE1LjA4NyAyMWgtMi4wODl2MS4wMDFhLjk5OC45OTggMCAwIDEtMS4wMDIuOTk5Ljk5Ny45OTcgMCAwIDEtMS4wMDEtLjk5OVYyMUg1Ljk4N3pNNS45ODUgMWg1LjAwN2MuMDA5IDAgLjAwNC4wMDUuMDA0IDBINS45OWMtLjAxIDAtLjAwNS0uMDA1LS4wMDUgMHptLTEgMGMwLS41NTIuNDM5LTEgMS4wMDUtMWg1LjAwMmExIDEgMCAxIDEgMCAySDUuOTlhMSAxIDAgMCAxLTEuMDA1LTF6bTEuMDAyIDFoMS4wMDF2M0g1Ljk4N1Yyem00LjAwNiAwaDEuMDAydjNIOS45OTNWMnoiIGZpbGw9IiM5MkIwQjkiLz48cGF0aCBkPSJNOC40NCAxNC42MmwtMS44MzggMS43ODJhLjk2Ljk2IDAgMCAxLTEuMzI3IDAgLjg5Ljg5IDAgMCAxIDAtMS4yODZsMS44MzgtMS43ODItMS44MzgtMS43ODJhLjg5Ljg5IDAgMCAxIDAtMS4yODYuOTYuOTYgMCAwIDEgMS4zMjcgMGwxLjgzOCAxLjc4MiAxLjgzOC0xLjc4MmEuOTYuOTYgMCAwIDEgMS4zMjcgMCAuODkuODkgMCAwIDEgMCAxLjI4NmwtMS44MzggMS43ODIgMS44MzggMS43ODJhLjg5Ljg5IDAgMCAxIDAgMS4yODYuOTYuOTYgMCAwIDEtMS4zMjcgMEw4LjQ0IDE0LjYyeiIgZmlsbD0iIzk2QjBCOSIvPjwvZz48L3N2Zz4=) no-repeat;
+}
+.--empty.is-selected .without-baggage.--baggage .ticket__baggage-icon {
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAxNyAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R3JvdXAgMTI8L3RpdGxlPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTQuOTg3IDIxdi0xaDcuMDA4djJjMCAuMDAyLS4wMDIgMCAwIDAgLjAwNSAwIC4wMDMuMDAyLjAwMyAwdi0yaDMuMDljLjUyIDAgLjkxMi0uNDE3LjkxMi0uOTk1VjYuOTk1YzAtLjU4LS4zOTItLjk5NS0uOTEzLS45OTVIMS45NjVDMS40MjUgNiAxIDYuNDM1IDEgNi45OTV2MTIuMDFjMCAuNTYuNDI1Ljk5NS45NjUuOTk1aDMuMDJ2MmMwIC4wMDItLjAwMyAwIDAgMCAuMDA0IDAgLjAwMi4wMDIuMDAyIDB2LTF6bTEgMHYxYzAgLjU1My0uNDQ1IDEtMS4wMDIgMS0uNTUzIDAtMS0uNDQzLTEtMXYtMWgtMi4wMkMuODYyIDIxIDAgMjAuMTA3IDAgMTkuMDA1VjYuOTk1QzAgNS44OTMuODYzIDUgMS45NjUgNWgxMy4xMjJDMTYuMTkgNSAxNyA1Ljg5MyAxNyA2Ljk5NXYxMi4wMUMxNyAyMC4xMDcgMTYuMTg4IDIxIDE1LjA4NyAyMWgtMi4wOXYxYzAgLjU1My0uNDQzIDEtMSAxYS45OTguOTk4IDAgMCAxLTEuMDAyLTF2LTFINS45ODd6TTUuOTg1IDFoNS4wMDdjLjAxIDAgLjAwNC4wMDUuMDA0IDBINS45OWMtLjAxIDAtLjAwNS0uMDA1LS4wMDUgMHptLTEgMGMwLS41NTIuNDQtMSAxLjAwNS0xaDUuMDAyYTEgMSAwIDAgMSAxLjAwNCAxYzAgLjU1Mi0uNDM4IDEtMS4wMDQgMUg1Ljk5YTEgMSAwIDAgMS0xLjAwNS0xem0xLjAwMiAxaDF2M2gtMVYyem00LjAwNiAwaDEuMDAydjNIOS45OTNWMnoiIGZpbGw9IiNGMzRDM0QiLz48cGF0aCBkPSJNOC40NCAxNC42MmwtMS44MzggMS43ODJjLS4zNjcuMzU1LS45Ni4zNTUtMS4zMjcgMHMtLjM2Ny0uOTMgMC0xLjI4NmwxLjgzOC0xLjc4Mi0xLjgzOC0xLjc4MmEuODg5Ljg4OSAwIDAgMSAwLTEuMjg2Ljk2Ljk2IDAgMCAxIDEuMzI3IDBsMS44MzggMS43ODIgMS44MzgtMS43ODJhLjk2Ljk2IDAgMCAxIDEuMzI3IDAgLjg5Ljg5IDAgMCAxIDAgMS4yODZsLTEuODM4IDEuNzgyIDEuODM4IDEuNzgyYS44OS44OSAwIDAgMSAwIDEuMjg2Ljk2Ljk2IDAgMCAxLTEuMzI3IDBMOC40NCAxNC42MnoiIGZpbGw9IiNGRjRDM0UiLz48L2c+PC9zdmc+) no-repeat;
+}
+.tariffs.is-hidden {
+	display: none;
+}
+.adsense-banner {
+	width: 729px;
+	margin: 0 auto 20px;
+	box-shadow: 0px 0px 3px 0px hsla(0, 0%, 62%, 0.5);
+	border-radius: 3px;
+	overflow: hidden;
+	padding: 20px;
+	background: #fff;
+}
+.hidden {
+	display: none;
+}
+:not(:empty).travelaudience.--ticket {
+	margin: 0 0 19px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	will-change: transform;
+}
+:not(:empty).travelaudience.--ticket iframe {
+	display: block;
+}
+:not(:empty).google-tag {
+	margin-bottom: 20px;
+}
+.ticket.is-faded-in .ticket__proposals .is-animated, .ticket.is-faded-in .ticket__segments {
+	-webkit-animation: fadein-ticket 75ms linear;
+	-o-animation: fadein-ticket 75ms linear;
+	animation: fadein-ticket 75ms linear;
+}

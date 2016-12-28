@@ -1,0 +1,90 @@
+group 'com.travel'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.springframework:spring-webmvc:4.2.7.RELEASE'
+    compile 'org.springframework:spring-web:4.2.7.RELEASE'
+    compile 'org.springframework:spring-core:4.2.7.RELEASE'
+    compile 'org.springframework:spring-context:4.2.7.RELEASE'
+    compile 'org.springframework:spring-orm:4.2.7.RELEASE'
+    compile 'org.springframework:spring-tx:4.2.7.RELEASE'
+
+    compile 'org.springframework.security:spring-security-config:4.1.0.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.1.0.RELEASE'
+    compile 'org.springframework.security:spring-security-core:4.1.0.RELEASE'
+    compile 'org.springframework.security:spring-security-taglibs:4.1.0.RELEASE'
+
+    compile 'org.hibernate:hibernate-core:4.3.11.Final'
+    compile 'org.hibernate:hibernate-entitymanager:4.3.11.Final'
+    compile 'javax.validation:validation-api:1.1.0.Final'
+    compile 'org.hibernate:hibernate-validator:5.2.4.Final'
+    compile 'mysql:mysql-connector-java:5.1.39'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'javax.servlet.jsp:jsp-api:2.2'
+    compile 'javax.servlet:jstl:1.2'
+
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'org.slf4j:slf4j-log4j12:1.7.12'
+    compile 'org.apache.logging.log4j:log4j-api:2.7'
+    compile 'org.apache.logging.log4j:log4j-core:2.7'
+
+    compile 'com.fasterxml.jackson.core:jackson-core:2.8.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
+
+    compile 'org.jsoup:jsoup:1.10.1'
+    compile 'org.seleniumhq.selenium:selenium-server:3.0.1'
+    compile 'org.seleniumhq.selenium:selenium-java:3.0.1'
+    compile 'com.codeborne:phantomjsdriver:1.3.0'
+
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.itextpdf:itextpdf:5.5.10'
+    compile 'com.itextpdf.tool:xmlworker:5.5.10'
+    compile 'commons-fileupload:commons-fileupload:1.3.2'
+
+    compile 'joda-time:joda-time:2.9.4'
+
+    compile 'org.yaml:snakeyaml:1.17'
+    compile 'org.liquibase:liquibase-core:3.5.3'
+
+    compile 'com.github.jsimone:webapp-runner:8.0.30.2'
+}
+
+
+task stage() {
+    dependsOn clean, war
+}
+tasks.stage.doLast() {
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/assetCompile")
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/libs", exclude: "*.war")
+}
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)

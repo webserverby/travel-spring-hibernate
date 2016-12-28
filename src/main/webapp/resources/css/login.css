@@ -1,0 +1,77 @@
+body {
+	background-color: #DDDDDD;
+}
+
+.contain {
+	display: block;
+	background-color: #DDDDDD;
+}
+
+.error {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+
+.msg {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+#login-box {
+	width: 370px;
+	padding: 10px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #D3D3D3;
+}
+
+.log-message {
+	font: bold 14px Verdana, Geneva, Arial;
+	text-align: center;
+}
+
+.checkbox-lang{
+	margin: 10px 0 0 10px;
+	font: normal 13px Verdana, Geneva, Arial;
+}
+
+.lang {
+	font: normal 14px Verdana, Geneva, Arial;
+	margin: -15px 0 0 285px;
+	position: absolute;
+}
+#lang-p{
+	margin: 1px 0 0 0;
+}
+
+.css-input-login {
+	width: 260px;
+	font-size:13px;
+	border: 1px solid #70E3ED;
+	padding:9px;
+	color:black;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left: 25px;
+	height:18px;
+	display:inline-block;
+	line-height:18px;
+	color: black;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font: normal 13px Verdana, Geneva, Arial;
+	vertical-align:middle;
+	cursor:pointer;
+
+}
